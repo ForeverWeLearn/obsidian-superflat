@@ -97,6 +97,10 @@ body {
   top: 15vh;
 }
 
+.tree-item-self, .tree-item-self.nav-folder-title {
+  padding-block: var(--size-4-2);
+}
+
 .workspace-tab-header.is-active > .workspace-tab-header-inner {
   background-color: var(--color-base-30);
 }

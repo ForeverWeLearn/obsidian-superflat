@@ -113,6 +113,12 @@ body {
 .prompt {
     top: 15vh;
 }
+.tree-item-self {
+    &,
+    &.nav-folder-title {
+        padding-block: var(--size-4-2);
+    }
+}
 
 // 5. Colors ==================================================================
 // Active tab background
