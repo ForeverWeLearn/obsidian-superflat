@@ -1,50 +1,50 @@
 $superflat-fade-duration: 0.35s;
 
 @keyframes superflat-appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-// I. Obsidian variables ======================================================
+// 1. Obsidian variables ======================================================
 body {
-  --border-width: 0;
+    --border-width: 0;
 
-  --background-secondary: var(--background-primary);
-  --background-secondary-alt: var(--background-primary-alt);
+    --background-secondary: var(--background-primary);
+    --background-secondary-alt: var(--background-primary-alt);
 
-  --radius-s: 7px;
-  --radius-m: 9px;
-  --radius-l: 13px;
-  --radius-xl: 17px;
+    --radius-s: 7px;
+    --radius-m: 9px;
+    --radius-l: 13px;
+    --radius-xl: 17px;
 
-  --divider-color: transparent;
-  --divider-color-hover: #ffffff12;
-  --divider-width: 5px;
+    --divider-color: transparent;
+    --divider-color-hover: #ffffff12;
+    --divider-width: 5px;
 
-  --ribbon-background: var(--background-primary);
-  --ribbon-width: 4rem;
-  --ribbon-padding: 1rem;
+    --ribbon-background: var(--background-primary);
+    --ribbon-width: 4rem;
+    --ribbon-padding: 1rem;
 
-  --scrollbar-width: 5px;
-  --scrollbar-thumb-bg: #ffffff10;
+    --scrollbar-width: 5px;
+    --scrollbar-thumb-bg: #ffffff10;
 
-  --vault-profile-actions-display: none;
+    --vault-profile-actions-display: none;
 
-  --titlebar-background: var(--background-primary);
-  --titlebar-background-focused: var(--background-primary);
-  --header-height: 3rem;
+    --titlebar-background: var(--background-primary);
+    --titlebar-background-focused: var(--background-primary);
+    --header-height: 3rem;
 }
 
-// II. Remove =================================================================
+// 2. Completely remove =======================================================
 .workspace-sidedock-vault-profile, // Vault buttons
 .workspace-tab-header-new-tab, // New tab button
 .workspace-tab-header-tab-list // Tab list button at the header right
 {
-  display: none !important;
+    display: none !important;
 }
 
 .workspace-tab-header-spacer,
@@ -55,61 +55,61 @@ body {
 .modal-close-button, // Close button in settings popup
 .prompt-instructions // Instruction line at the bottom of prompt popup
 {
-  display: none;
+    display: none;
 }
 
 // Window control buttons
 .titlebar-button-container.mod-right,
 .workspace-tab-header-container::after {
-  display: none;
+    display: none;
 }
 .workspace-tab-header-container {
-  padding-right: var(--size-4-2) !important;
+    padding-right: var(--size-4-2) !important;
 }
 
-// II. Hide ===================================================================
+// 3. Hide ====================================================================
 .workspace-tab-header-container,
 .workspace-ribbon, // Ribbon
 .view-header, // Tab title bar
 .status-bar, // Status bar
 .nav-header // Sidebar header (list of buttons)
 {
-  transition: opacity $superflat-fade-duration;
-  opacity: 0;
-  &:hover {
-    opacity: 1;
-  }
+    transition: opacity $superflat-fade-duration;
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .workspace-tab-header-container:has(.sidebar-toggle-button.mod-right) {
-  opacity: 1;
+    opacity: 1;
 }
 
 // Active tab decorators
 .workspace-tab-header.is-active::before,
 .workspace-tab-header.is-active::after {
-  opacity: 0;
+    opacity: 0;
 }
 
-// III. Alignment
+// 4. Alignment ===============================================================
 .workspace-tab-header-container {
-  justify-content: center;
+    justify-content: center;
 }
 .prompt-input {
-  padding-top: var(--size-4-8) !important;
+    padding-top: var(--size-4-8) !important;
 }
 .prompt {
-  top: 15vh;
+    top: 15vh;
 }
 
-// IV. Color
+// 5. Colors ==================================================================
 // Active tab background
 .workspace-tab-header.is-active > .workspace-tab-header-inner {
-  background-color: var(--color-base-30);
+    background-color: var(--color-base-30);
 }
 
-// V. Animations =============================================================
-// Popup appear
+// 6. Animations ==============================================================
+// Popup open
 .modal-container {
-  animation: superflat-appear $superflat-fade-duration;
+    animation: superflat-appear $superflat-fade-duration;
 }
