@@ -69,6 +69,13 @@ body {
   opacity: 1;
 }
 
+.workspace-tab-header-inner > .workspace-tab-header-inner-close-button {
+  visibility: collapse;
+}
+.workspace-tab-header-inner:hover > .workspace-tab-header-inner-close-button {
+  visibility: initial;
+}
+
 .workspace-tab-header-container:has(.sidebar-toggle-button.mod-right) {
   opacity: 1;
 }

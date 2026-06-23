@@ -81,6 +81,17 @@ body {
     }
 }
 
+// Hide close button until tab hovered
+.workspace-tab-header-inner {
+    & > .workspace-tab-header-inner-close-button {
+        visibility: collapse;
+    }
+
+    &:hover > .workspace-tab-header-inner-close-button {
+        visibility: initial;
+    }
+}
+
 .workspace-tab-header-container:has(.sidebar-toggle-button.mod-right) {
     opacity: 1;
 }
