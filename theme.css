@@ -89,12 +89,16 @@ body {
   justify-content: center;
 }
 
+.prompt {
+  top: 15vh;
+}
+
 .prompt-input {
   margin-top: var(--size-4-2);
 }
 
-.prompt {
-  top: 15vh;
+.suggestion-item {
+  padding-block: var(--size-4-3);
 }
 
 .tree-item-self, .tree-item-self.nav-folder-title {
