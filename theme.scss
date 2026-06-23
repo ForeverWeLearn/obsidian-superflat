@@ -44,7 +44,7 @@ body {
 .workspace-tab-header-new-tab, // New tab button
 .workspace-tab-header-tab-list // Tab list button at the header right
 {
-    display: none !important;
+    visibility: collapse;
 }
 
 .workspace-tab-header-spacer,
@@ -64,7 +64,8 @@ body {
     display: none;
 }
 .workspace-tab-header-container {
-    padding-right: var(--size-4-2) !important;
+    // Fix right tab header auto append an offset padding (for window control buttons)
+    padding-inline: var(--size-4-2) !important;
 }
 
 // 3. Hide ====================================================================
@@ -107,7 +108,7 @@ body {
     justify-content: center;
 }
 .prompt-input {
-    padding-top: var(--size-4-8) !important;
+    margin-top: var(--size-4-2);
 }
 .prompt {
     top: 15vh;

@@ -31,7 +31,7 @@ body {
 .workspace-sidedock-vault-profile,
 .workspace-tab-header-new-tab,
 .workspace-tab-header-tab-list {
-  display: none !important;
+  visibility: collapse;
 }
 
 .workspace-tab-header-spacer,
@@ -50,7 +50,7 @@ body {
 }
 
 .workspace-tab-header-container {
-  padding-right: var(--size-4-2) !important;
+  padding-inline: var(--size-4-2) !important;
 }
 
 .workspace-tab-header-container,
@@ -90,7 +90,7 @@ body {
 }
 
 .prompt-input {
-  padding-top: var(--size-4-8) !important;
+  margin-top: var(--size-4-2);
 }
 
 .prompt {
